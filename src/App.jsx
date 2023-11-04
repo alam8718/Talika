@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import {TalikaContext, TalikaProvider, useTalika} from "./Contexts/Index";
+import {TalikaProvider} from "./Contexts/Index";
 import "./App.css";
 import TalikaForm from "./componenets/TalikaForm";
 import TalikaItem from "./componenets/TalikaItem";
@@ -27,8 +27,10 @@ function App() {
 
   const toggleComplete = (id) => {
     setTodos((prev) =>
-      prev.map((todo) => {
-        return todo.id === id ? {...todo, completed: !todo.completed} : todo;
+      prev.map((prevtodo) => {
+        return prevtodo.id === id
+          ? {...prevtodo, completed: !prevtodo.completed}
+          : prevtodo;
       })
     );
   };
