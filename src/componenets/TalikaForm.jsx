@@ -15,7 +15,7 @@ function TalikaForm() {
 
     addTalika({todo, completed: false});
     setTodo("");
-    console.log(`I am entering from input ${todo}`);
+     
   };
  
   
